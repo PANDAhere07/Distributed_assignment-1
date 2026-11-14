@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="100%" height="100%">
+  <defs>
+    <filter id="winShadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#winShadow)">
+    <!-- Windows 11 Frame -->
+    <rect x="10" y="10" width="880" height="500" rx="8" fill="#0c0c0c" stroke="#2b2b2b" stroke-width="1.5" />
+
+    <!-- Windows 11 Title Bar -->
+    <rect x="10" y="10" width="880" height="38" rx="8" fill="#1f1f1f" />
+    <rect x="10" y="38" width="880" height="10" fill="#1f1f1f" />
+
+    <!-- Active Tab -->
+    <path d="M 20,40 L 20,16 Q 20,13 23,13 L 210,13 Q 213,13 213,16 L 213,40 Z" fill="#0c0c0c" />
+    <rect x="30" y="20" width="16" height="13" rx="2" fill="#012456" stroke="#1f5a9e" stroke-width="1" />
+    <text x="33" y="29" fill="#38d39f" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold">&gt;_</text>
+    <text x="52" y="29" fill="#cccccc" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="500">Windows PowerShell</text>
+    <text x="198" y="28" fill="#888888" font-family="'Segoe UI', sans-serif" font-size="11">✕</text>
+    <text x="228" y="28" fill="#888888" font-family="'Segoe UI', sans-serif" font-size="14">+</text>
+
+    <!-- Controls -->
+    <g transform="translate(775, 12)">
+      <line x1="10" y1="15" x2="22" y2="15" stroke="#cccccc" stroke-width="1.2" />
+      <rect x="44" y="8" width="11" height="11" fill="none" stroke="#cccccc" stroke-width="1.2" />
+      <line x1="80" y1="9" x2="91" y2="20" stroke="#cccccc" stroke-width="1.2" />
+      <line x1="91" y1="9" x2="80" y2="20" stroke="#cccccc" stroke-width="1.2" />
+    </g>
+
+    <!-- Terminal Content Area -->
+    <g font-family="'Cascadia Mono', 'Cascadia Code', Consolas, 'Courier New', monospace" font-size="12">
+      <!-- Command Prompt -->
+      <text x="25" y="70">
+        <tspan fill="#38d39f" font-weight="bold">PS E:\Project\Distributed&gt;</tspan>
+        <tspan fill="#ffffff"> mpiexec -n 2 .\bin\04_distributed_array_processing.exe</tspan>
+      </text>
+
+      <text x="25" y="98" fill="#64748b">======================================================================</text>
+      <text x="25" y="117" fill="#f9f1a5" font-weight="bold"> DISTRIBUTED PARALLEL COMPUTATION: VECTOR DOT-PRODUCT                 </text>
+      <text x="25" y="136" fill="#64748b">======================================================================</text>
+      <text x="25" y="155" fill="#61d6d6"> Master System : LAPTOP-WIN11 (Rank 0)</text>
+      <text x="25" y="174" fill="#cccccc"> Vector Size   : 2000000 elements</text>
+      <text x="25" y="193" fill="#cccccc"> Division      : Each system processes 1000000 elements</text>
+      <text x="25" y="212" fill="#64748b">----------------------------------------------------------------------</text>
+      <text x="25" y="233" fill="#61d6d6">[SYSTEM 1] Scattering data to System 2...</text>
+      <text x="25" y="254" fill="#61d6d6">[SYSTEM 1 (LAPTOP-WIN11)] Local dot product: 2000000.00</text>
+      <text x="25" y="275" fill="#c084fc">[SYSTEM 2 (DESKTOP-WIN11)] Local dot product: 2000000.00</text>
+      <text x="25" y="296" fill="#64748b">----------------------------------------------------------------------</text>
+      <text x="25" y="318" fill="#cccccc">[SYSTEM 1] Global Dot Product Result : 4000000.00</text>
+      <text x="25" y="338" fill="#cccccc">[SYSTEM 1] Analytical Expected Result: 4000000.00</text>
+      <text x="25" y="358" fill="#16c60c" font-weight="bold">[SYSTEM 1] Verification Status       : PASSED (MATCH)</text>
+      <text x="25" y="378" fill="#cccccc">[SYSTEM 1] Total Runtime             : 0.048712 seconds</text>
+      <text x="25" y="400" fill="#64748b">======================================================================</text>
+
+      <!-- Active Prompt -->
+      <text x="25" y="445">
+        <tspan fill="#38d39f" font-weight="bold">PS E:\Project\Distributed&gt;</tspan>
+        <tspan fill="#cccccc">█</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

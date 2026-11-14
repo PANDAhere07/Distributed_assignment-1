@@ -1,0 +1,10 @@
+# ==============================================================================
+# MPI Hostfile: 2 Networked Systems (System 1 and System 2)
+# Format: <IP_OR_HOSTNAME> slots=<NUMBER_OF_CPUS/CORES>
+# ==============================================================================
+
+# System 1 (Master / Rank 0) - IP address on local network
+192.168.1.101 slots=1
+
+# System 2 (Worker / Rank 1) - IP address on local network
+192.168.1.102 slots=1
